@@ -1,6 +1,6 @@
 //
 //  Collection Protocols.swift
-//  TestingAreaCharts
+//  CollectionLibrary
 //
 //  Created by Igor Malyarov on 25.05.2020.
 //  Copyright © 2020 Igor Malyarov. All rights reserved.
