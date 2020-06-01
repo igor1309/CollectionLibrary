@@ -9,18 +9,18 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct CollectionRowView<Card: View>: View {
-    let collectionRow: CollectionRow
-    let cardView: (CollectionElement) -> Card
+public struct CollectionRowView<Card: View>: View {
+    public let collectionRow: CollectionRow
+    public let cardView: (CollectionElement) -> Card
     
-    init(collectionRow: CollectionRow,
+    public init(collectionRow: CollectionRow,
          @ViewBuilder cardView: @escaping (CollectionElement) -> Card) {
         
         self.collectionRow = collectionRow
         self.cardView = cardView
     }
     
-    var body: some View {
+    public var body: some View {
         VStack(alignment: .leading, spacing: 6) {
             VStack(alignment: .leading, spacing: 0) {
                 Text(collectionRow.title)

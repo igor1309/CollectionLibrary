@@ -9,18 +9,18 @@
 import SwiftUI
 
 @available(iOS 13.0, *)
-struct CollectionView<Card: View>: View {
-    let collection: [CollectionRow]
-    let cardView: (CollectionElement) -> Card
+public struct CollectionView<Card: View>: View {
+    public let collection: [CollectionRow]
+    public let cardView: (CollectionElement) -> Card
     
-    init(collection: [CollectionRow],
+    public init(collection: [CollectionRow],
          @ViewBuilder cardView: @escaping (CollectionElement) -> Card) {
         
         self.collection = collection
         self.cardView = cardView
     }
     
-    var body: some View {
+    public var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(spacing: 16) {
                 ForEach(collection) { row in
