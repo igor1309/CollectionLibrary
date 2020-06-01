@@ -1,3 +1,3 @@
 # CollectionLibrary
 
-A description of this package.
+SwiftUI components for creating Collection View.
