@@ -14,6 +14,12 @@ public struct CollectionRow: Identifiable {
     public let title: String
     public let subtitle: String
     public let elements: [CollectionElement]
+    
+    public init (title: String, subtitle: String, elements: [CollectionElement]) {
+        self.title = title
+        self.subtitle = subtitle
+        self.elements = elements
+    }
 }
 
 public extension CollectionRow {
