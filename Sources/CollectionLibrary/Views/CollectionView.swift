@@ -31,27 +31,3 @@ public struct CollectionView<Card: View>: View {
         }
     }
 }
-
-//  MARK: -
-@available(iOS 13.0, *)
-struct CollectionView_Previews: PreviewProvider {
-    static var collection = [CollectionRow.moscow,
-                             CollectionRow.moscow,
-                             CollectionRow.moscow]
-    
-    static func card(element: Elementable) -> some View {
-        Rectangle()
-            .fill(Color.blue)
-            .aspectRatio(2/3, contentMode: .fit)
-            .frame(width: 120)
-    }
-    
-    static var previews: some View {
-        CollectionView(collection: collection) { element in
-            card(element: element)
-        }
-        .background(Color(UIColor.systemBackground).edgesIgnoringSafeArea(.all))
-        .environment(\.colorScheme, .dark)
-        .previewLayout(.sizeThatFits)
-    }
-}
